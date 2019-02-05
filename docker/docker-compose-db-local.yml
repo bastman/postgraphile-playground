@@ -1,0 +1,11 @@
+version: '3'
+services:
+  postgraphile-playground-local-db:
+    image: local/postgraphile-playground-db:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgraphile-playground-local-db-volume:/var/lib/postgresql/data
+
+volumes:
+  postgraphile-playground-local-db-volume: {}
