@@ -57,8 +57,8 @@ db-local.down.v:
 
 ## postgraphile.up
 postgraphile.up:
-	$(eval DEBUG := "postgraphile:graphql,postgraphile:request,postgraphile:postgres*")
-	npx postgraphile -c postgres://$(DB_URI) --enhance-graphiql --extended-errors severity,code,detail,hint,positon,internalPosition,internalQuery,where,schema,table,column,dataType,constraint,file,line,routine
+	#$(eval DEBUG := "postgraphile:graphql,postgraphile:request,postgraphile:postgres*")
+	export DEBUG="postgraphile:graphql,postgraphile:request,postgraphile:postgres*" && npx postgraphile -c postgres://$(DB_URI) --enhance-graphiql --extended-errors severity,code,detail,hint,positon,internalPosition,internalQuery,where,schema,table,column,dataType,constraint,file,line,routine
 
 
 ## psql.connect:   : connect to a postgres db
