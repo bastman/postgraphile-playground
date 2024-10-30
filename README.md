@@ -1,5 +1,10 @@
 # postgraphile-playground
 
+
+NOTE: superseeded by https://github.com/alexisrolland/docker-postgresql-postgraphile
+
+
+
 see: https://github.com/graphile/postgraphile
 
 ## node.js : install + use
